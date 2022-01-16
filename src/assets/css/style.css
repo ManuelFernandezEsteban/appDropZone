@@ -216,8 +216,9 @@ p{
     flex-direction: column;
     justify-content: space-evenly;
     height: 400px;
+    width: 100%;
 }
-input[type="email"]{
+input[type="email"],input[type="text"],input[type="password"]{
     border: none;
     background-color: #130F26;
     border-bottom: 1px solid white;
@@ -226,7 +227,7 @@ input[type="email"]{
     font-size: 16px;
     width: 100%;
 }
-input[type="password"]{
+input:-internal-autofill-selected{
     border: none;
     background-color: #130F26;
     border-bottom: 1px solid white;
@@ -234,4 +235,28 @@ input[type="password"]{
     font-family: Montserrat;
     font-size: 16px;
     width: 100%;
+}
+
+@media (max-width:800px)  {
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .tech{
+        display: none;
+    }
+    .box-dcha{        
+        display: flex;
+        flex-direction: column;   
+        align-items: center;   
+        width: 100%;   
+        margin: 0px; 
+    }
+    p{
+        margin-left: 0px;
+    }
 }
