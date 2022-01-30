@@ -18,24 +18,31 @@
 </section>
 <section class="box-dcha">
     <h4>Login DDrop</h4>
-    <form action="">
+    <form (submit)="login()"    
+          autocomplete="off"
+          [formGroup]="formularioLogin">
         <div class="box-form">
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="">
+                <input type="email" name="email" formControlName='email'>
             </div>
             <div>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="">
+                <input type="password" name="password" formControlName='password'>
             </div>
-            <input class="boton-login" type="button" value="Entrar">
+            <input class="boton-login" type="submit" value="Entrar">
         </div>
     </form>
     
-    <p>¿No tienes cuenta?, regístrate <a href="">aquí</a> </p>
+    <span>¿No tienes cuenta?, regístrate  <a routerLink='/register'>aquí</a></span> 
     <hr>
     <button class="google">
         <div class="img-google"><img src="../../../assets/images/google.png" alt="">Login con Google</div>
     </button>
+    <div class="modal" *ngIf="error">
+        <h2>Ups, algo ha salido mal</h2>
+        <p>{{textoError}}</p>
+        <input class="boton-pequeno" type="button" value="Cerrar" (click)="cerrarModal()">
+    </div>
 </section>
 </div>

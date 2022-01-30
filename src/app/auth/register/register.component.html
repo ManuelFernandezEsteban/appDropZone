@@ -18,32 +18,79 @@
     </section>
     <section class="box-dcha">
         <h4>Registarse en DDrop</h4>
-        <form action="">
+        <form (ngSubmit)="crearUsurio()"
+                autocomplete="off"
+                [formGroup]="formularioRegistro">
             <div class="box-form">
                 <div>
-                    <label for="name">Nombre</label>
-                    <input type="text" name="name" id="">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" 
+                           name="nombre" 
+                           
+                           formControlName="nombre">
+                </div>
+                <div class="columna" *ngIf="!campoNoValido('nombre')">
+                    <div class="fila rojo">
+                        <p >
+                            El nombre es obligatorio
+                        </p>
+                    </div>
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="">
+                    <input type="email" 
+                           name="email" 
+                           
+                           formControlName="email">
+                </div>
+                <div class="columna">
+                    <div class="fila rojo">
+                        <p *ngIf="!campoNoValido('email')">
+                            El email es obligatorio
+                        </p>
+                    </div>
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="">
+                    <input type="password" 
+                           name="password" 
+                           
+                           formControlName="password">
+                </div>
+                <div class="columna">
+                    <div class="fila rojo">
+                        <p *ngIf="!campoNoValido('password')">
+                            El password es obligatorio
+                        </p>
+                    </div>
                 </div>
                 <div>
                     <label for="conf-password">Confirmar password</label>
-                    <input type="password" name="conf-password" id="">
+                    <input type="password" 
+                           name="password2" 
+                           
+                           formControlName="password2">
                 </div>
-                <input class="boton-login" type="button" value="Registrar">
+                <div class="columna">
+                    <div class="fila rojo">
+                        <p *ngIf="passwordsIguales()">
+                            Los password han de ser iguales
+                        </p>
+                    </div>
+                </div>
+                <input class="boton-login" type="submit" value="Registrar">
             </div>
         </form>
        
-        <p>¿Ya tienes cuenta?, accede<a href=""> aquí</a> </p>
+        <span>¿Ya tienes cuenta?, accede<a routerLink='/login'> aquí</a></span> 
         <hr>
         <button class="google">
             <div class="img-google"><img src="../../../assets/images/google.png" alt="">Login con Google</div>
         </button>
+        <div class="modal" *ngIf="error">
+            <h2>Ups, algo ha salido mal</h2>
+            <p>{{textoError}}</p>
+            <input class="boton-pequeno" type="button" value="Cerrar" (click)="cerrarModal()">
+        </div>
     </section>
 </div>

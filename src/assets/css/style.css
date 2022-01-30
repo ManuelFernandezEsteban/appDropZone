@@ -2,8 +2,7 @@
 
 
 body{
-    width: 100vw;
-    height: 100vh;
+    
     background-color: #130F26;
     color: white;
     font-family: Montserrat;
@@ -13,9 +12,7 @@ body{
     flex-direction: row;
     justify-content: center;  
     align-items: center;
-    height: 100%;
-    width: 100%;
-}
+    }
 .tech{
     position: relative;
     width: 822px;
@@ -77,11 +74,9 @@ body{
 }
 .modal{
     background-color: #232730;
-    width: 556px;
-    height: 305px;
-    position: absolute;
-    top: 172px;
-    left: 133px;
+    width: 100%;
+    height: 305px; 
+      
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +118,8 @@ h1{
     display: flex;
     flex-direction: column;   
     align-items: center;   
-    margin-left: 50px;     
+    margin-left: 50px; 
+        
 }
 h4{
     font-size: 34px;
@@ -178,7 +174,7 @@ p{
     margin-left: 40px;
 }
 .boton-pequeno{
-    
+    cursor: pointer;
     width: 192px;
     height: 56px;
     background-color: #569b51;
@@ -208,14 +204,14 @@ p{
     border-radius: 5px;    
     padding: 0px;    
     border: none;
-    
+    cursor: pointer;
 }
 
 .box-form{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 400px;
+    
     width: 100%;
 }
 input[type="email"],input[type="text"],input[type="password"]{
@@ -235,6 +231,18 @@ input:-internal-autofill-selected{
     font-family: Montserrat;
     font-size: 16px;
     width: 100%;
+}
+
+.columna{
+    display: flex;
+    flex-direction: column;
+}
+.fila{
+    display: flex;
+    flex-direction: row;
+}
+.rojo{
+    color: red;
 }
 
 @media (max-width:800px)  {
