@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService } from '../../services/usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -24,7 +25,7 @@ export class RegisterComponent implements OnInit {
     validators: this.passwordsValidos('password','password2')
   })
 
-  constructor(private fb:FormBuilder,private usuarioService:UsuarioService) { }
+  constructor(private fb:FormBuilder,private usuarioService:UsuarioService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -40,6 +41,8 @@ export class RegisterComponent implements OnInit {
     this.usuarioService.crearUsuario(this.formularioRegistro.value)
       .subscribe(resp=>{
         console.log('usuario creado');
+        //navegar al dashbord
+        this.router.navigateByUrl('/');
         console.log(resp);
       },
         (error)=>this.abrirModal(error.error.msg)      

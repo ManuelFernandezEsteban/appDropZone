@@ -36,9 +36,10 @@
     
     <span>¿No tienes cuenta?, regístrate  <a routerLink='/register'>aquí</a></span> 
     <hr>
-    <button class="google">
-        <div class="img-google"><img src="../../../assets/images/google.png" alt="">Login con Google</div>
+    <button class="google" id="customBtn">
+        <div class="img-google"><img src="../../../assets/images/google.png" alt=""><span id="logadoGoogle">Login con Google</span> </div>
     </button>
+    
     <div class="modal" *ngIf="error">
         <h2>Ups, algo ha salido mal</h2>
         <p>{{textoError}}</p>

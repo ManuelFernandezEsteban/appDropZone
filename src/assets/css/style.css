@@ -151,7 +151,8 @@ hr{
     background-color: #130F26;
     border: 1px solid white;  
     font-size: 16px;
-    font-family: Montserrat;  
+    font-family: Montserrat;
+    cursor: pointer;  
 }
 .img-google{
     display: flex;
