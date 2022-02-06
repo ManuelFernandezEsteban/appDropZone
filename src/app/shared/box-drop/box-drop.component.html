@@ -1,5 +1,9 @@
 <div class="box-izq">
-    <div class="tech">
+   
+    <div class="tech ngx-dz-hovered custom-dropzone" ngx-dropzone [expandable]="true" (change)="onSelect($event)">
+       <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+        </ngx-dropzone-preview>
         <img id="php" src="../../../assets/images/php.png" alt="">
         <img id="ncube" src="../../../assets/images/nCube.png" alt="">
         <img id="css" src="../../../assets/images/css.png" alt="">
@@ -13,6 +17,6 @@
         <h1>ARRASTRA TUS ARCHIVOS AQUÍ</h1>
     </div>
     
-    <input class="boton" type="button" value="Subir Archivos">  
+    <input class="boton" type="button" value="Subir Archivos" (click)="subirArchivos()">  
 </div>    
       

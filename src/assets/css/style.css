@@ -246,6 +246,8 @@ input:-internal-autofill-selected{
     color: red;
 }
 
+
+
 @media (max-width:800px)  {
     .main{
         display: flex;
