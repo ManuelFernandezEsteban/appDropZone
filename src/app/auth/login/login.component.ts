@@ -27,17 +27,16 @@ export class LoginComponent implements OnInit {
     this.conectarBoton();
   }
 
-  login(){
+  login(){    
     
-    console.log(this.formularioLogin.value);
     this.usuarioService.login(this.formularioLogin.value).subscribe(resp=>{
-      console.log(resp)
+      //console.log(resp)
+      //navegar al dashbord
+      this.router.navigateByUrl('/');
     },  (err)=>{
       this.abrirModal(err.error.msg)
-    })
-
-  //navegar al dashbord
-  this.router.navigateByUrl('/');
+    })  
+  
   }
   cerrarModal(){
     this.error=false;
