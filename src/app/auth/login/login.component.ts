@@ -1,9 +1,11 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { environment } from '../../../environments/environment';
 
 declare const gapi:any;
+const client_ID = environment.client_ID;
 
 @Component({
   selector: 'app-login',
@@ -15,6 +17,8 @@ export class LoginComponent implements OnInit {
   public formEnviado=false;
   public error:boolean=false;
   public textoError:string='';
+
+  
  
 
   public formularioLogin=this.fb.group({    
@@ -32,19 +36,17 @@ export class LoginComponent implements OnInit {
     this.usuarioService.login(this.formularioLogin.value).subscribe(resp=>{
       //console.log(resp)
       //navegar al dashbord
+      this.error=false;
+      this.textoError=''
       this.router.navigateByUrl('/');
     },  (err)=>{
-      this.abrirModal(err.error.msg)
+      this.error=true;
+      
     })  
   
-  }
-  cerrarModal(){
-    this.error=false;
-  }
-  abrirModal(mensaje:string){
+  } 
 
-    this.error=true;
-    this.textoError=mensaje;
+  emitirError(){
 
   }
  
@@ -53,7 +55,7 @@ export class LoginComponent implements OnInit {
     gapi.load('auth2', ()=>{
       // Retrieve the singleton for the GoogleAuth library and set up the client.
        const auth2 = gapi.auth2.init({
-        client_id: '963830950272-tmpv61fcafd1ech4se49a9341is2ks42.apps.googleusercontent.com',
+        client_id: client_ID,
         cookiepolicy: 'single_host_origin',
         
         // Request scopes in addition to 'profile' and 'email'

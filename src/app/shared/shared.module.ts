@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BoxZoneComponent } from './box-zone/box-zone.component';
 import { BoxDropComponent } from './box-drop/box-drop.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { ComponentsModule } from '../components/components.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
   ],
   imports: [
     CommonModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    ComponentsModule
   ],
   exports:[
     BoxDropComponent,

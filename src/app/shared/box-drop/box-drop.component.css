@@ -1,7 +1,12 @@
 .custom-dropzone{
-    width: 822px!important;
-    height: 597px!important;   
+    width: 70vw!important;
+    height: 60vh!important;   
     border-radius: 5px!important;
     background-color: #130F26!important;
     border: none!important;
+    align-self: center;
+}
+
+.oculto{
+    display: none;
 }

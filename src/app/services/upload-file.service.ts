@@ -22,8 +22,7 @@ export class UploadFileService {
     files.forEach(element => {
       formData.append('files',element,element.name);
     });*/
-    console.log(formData)
-
+    
     return this.http.post(`${base_url}/upload/${this.usuarioService.user.uid}`,formData,{
       headers:{
         'x-token':this.usuarioService.user.token,

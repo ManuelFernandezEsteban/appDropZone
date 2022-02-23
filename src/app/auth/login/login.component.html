@@ -1,49 +1,47 @@
 <div class="main">
-<section class="box-izq">
-    <div>
-        <div class="tech">
-            <img id="php" src="../../../assets/images/php.png" alt="">
-            <img id="ncube" src="../../../assets/images/nCube.png" alt="">
-            <img id="css" src="../../../assets/images/css.png" alt="">
-            <img id="git" src="../../../assets/images/git.png" alt="">
-            <img id="mysql" src="../../../assets/images/mySql.png" alt="">
-            <img id="python" src="../../../assets/images/python.png" alt="">
-            <img id="sass" src="../../../assets/images/sass.png" alt="">
-            <img id="ts" src="../../../assets/images/ts.png" alt="">
-            <img id="vue" src="../../../assets/images/vue.png" alt="">
-            <img id="if" src="../../../assets/images/if.png" alt="">
-            <h1>ARRASTRA TUS ARCHIVOS AQUÍ</h1>
-        </div>
-    </div>
-</section>
-<section class="box-dcha">
-    <h4>Login DDrop</h4>
-    <form (submit)="login()"    
-          autocomplete="off"
-          [formGroup]="formularioLogin">
-        <div class="box-form">
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" formControlName='email'>
+  <!--  <section class="box-izq">
+        <div>
+            <div class="tech">
+                <img id="php" src="../../../assets/images/php.png" alt="">
+                <img id="ncube" src="../../../assets/images/nCube.png" alt="">
+                <img id="css" src="../../../assets/images/css.png" alt="">
+                <img id="git" src="../../../assets/images/git.png" alt="">
+                <img id="mysql" src="../../../assets/images/mySql.png" alt="">
+                <img id="python" src="../../../assets/images/python.png" alt="">
+                <img id="sass" src="../../../assets/images/sass.png" alt="">
+                <img id="ts" src="../../../assets/images/ts.png" alt="">
+                <img id="vue" src="../../../assets/images/vue.png" alt="">
+                <img id="if" src="../../../assets/images/if.png" alt="">
+                <h1>ARRASTRA TUS ARCHIVOS AQUÍ</h1>
             </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" name="password" formControlName='password'>
-            </div>
-            <input class="boton-login" type="submit" value="Entrar">
         </div>
-    </form>
-    
-    <span>¿No tienes cuenta?, regístrate  <a routerLink='/register'>aquí</a></span> 
-    <hr>
-    <button class="google" id="customBtn">
-        <div class="img-google"><img src="../../../assets/images/google.png" alt=""><span id="logadoGoogle">Login con Google</span> </div>
-    </button>
-    
-    <div class="modal" *ngIf="error">
-        <h2>Ups, algo ha salido mal</h2>
-        <p>{{textoError}}</p>
-        <input class="boton-pequeno" type="button" value="Cerrar" (click)="cerrarModal()">
-    </div>
-</section>
+    </section>-->
+    <section class="box-dcha no_padding">
+        <h4>Login DDrop</h4>
+        <form (submit)="login()" autocomplete="off" [formGroup]="formularioLogin">
+            <div class="box-form">
+                <div class="box-input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" formControlName='email'>
+                </div>
+                <div class="box-input">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" formControlName='password'>
+                </div>
+                <div class="box-input">
+                    <input class="boton-login" type="submit" value="Entrar">
+                </div>
+                
+            </div>
+        </form>
+
+        <span class="cuenta">¿No tienes cuenta?, regístrate <a routerLink='/register'>aquí</a></span>
+        <hr>
+        <button class="google" id="customBtn">
+            <div class="img-google"><img src="../../../assets/images/google.png" alt=""><span id="logadoGoogle">Login
+                    con Google</span> </div>
+        </button>
+        <app-error-card [error]="error"></app-error-card>
+
+    </section>
 </div>

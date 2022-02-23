@@ -15,6 +15,10 @@
         <img id="vue" src="../../../assets/images/vue.png" alt="">
         <img id="if" src="../../../assets/images/if.png" alt="">
         <h1>ARRASTRA TUS ARCHIVOS AQUÍ</h1>
+        <div #lista_archivos_subidos>
+            
+        </div>
+        <app-error-card [error]="error"></app-error-card>
     </div>
     
     <input class="boton" type="button" value="Subir Archivos" (click)="subirArchivos()">  

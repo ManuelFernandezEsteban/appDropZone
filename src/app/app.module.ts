@@ -7,6 +7,8 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,    
@@ -20,6 +22,7 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
     AuthModule,
     NgxDropzoneModule
   ],
+  exports:[],
   providers: [],
   bootstrap: [AppComponent]
 })

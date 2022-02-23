@@ -27,12 +27,14 @@ export class RegisterComponent implements OnInit {
 
   constructor(private fb:FormBuilder,private usuarioService:UsuarioService,private router:Router) { }
 
+  
+
   ngOnInit(): void {
   }
 
   crearUsurio(){
     this.formEnviado=true;
-    console.log(this.formularioRegistro.value);
+    
     if (this.formularioRegistro.invalid){
       return;
     }
@@ -43,9 +45,12 @@ export class RegisterComponent implements OnInit {
         console.log('usuario creado');
         //navegar al dashbord
         this.router.navigateByUrl('/');
-        console.log(resp);
+        
       },
-        (error)=>this.abrirModal(error.error.msg)      
+        (error)=>{
+          this.error=true;
+          
+        }
       );
 
   }
@@ -84,13 +89,5 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  cerrarModal(){
-    this.error=false;
-  }
-  abrirModal(mensaje:string){
-
-    this.error=true;
-    this.textoError=mensaje;
-
-  }
+  
 }
