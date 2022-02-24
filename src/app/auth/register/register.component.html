@@ -1,21 +1,5 @@
 <div class="main">
-<!--    <section class="box-izq">
-        <div>
-            <div class="tech">
-                <img id="php" src="../../../assets/images/php.png" alt="">
-                <img id="ncube" src="../../../assets/images/nCube.png" alt="">
-                <img id="css" src="../../../assets/images/css.png" alt="">
-                <img id="git" src="../../../assets/images/git.png" alt="">
-                <img id="mysql" src="../../../assets/images/mySql.png" alt="">
-                <img id="python" src="../../../assets/images/python.png" alt="">
-                <img id="sass" src="../../../assets/images/sass.png" alt="">
-                <img id="ts" src="../../../assets/images/ts.png" alt="">
-                <img id="vue" src="../../../assets/images/vue.png" alt="">
-                <img id="if" src="../../../assets/images/if.png" alt="">
-                <h1>ARRASTRA TUS ARCHIVOS AQUÍ</h1>
-            </div>
-        </div>
-    </section>-->
+
     <section class="box-dcha no_padding">
         <h4>Registarse en DDrop</h4>
         <form (ngSubmit)="crearUsurio()"
@@ -86,10 +70,7 @@
         </form>
        
         <span class="cuenta">¿Ya tienes cuenta?, accede<a routerLink='/login'> aquí</a></span> 
-        <hr>
-        <button class="google">
-            <div class="img-google"><img src="../../../assets/images/google.png" alt="">Login con Google</div>
-        </button>
+        
 
         <app-error-card [error]="error"></app-error-card>        
     </section>

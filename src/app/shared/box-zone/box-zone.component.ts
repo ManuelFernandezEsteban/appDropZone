@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../../models/usuario.model';
 
 @Component({
   selector: 'app-box-zone',
@@ -9,7 +10,11 @@ import { UsuarioService } from '../../services/usuario.service';
 })
 export class BoxZoneComponent implements OnInit {
 
-  constructor(private usuarioService:UsuarioService) { }
+  public user?:Usuario;
+
+  constructor(private usuarioService:UsuarioService) { 
+    this.user=usuarioService.user;
+  }
 
   ngOnInit(): void {
   }

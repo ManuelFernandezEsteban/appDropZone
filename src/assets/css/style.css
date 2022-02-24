@@ -16,63 +16,64 @@ body{
     justify-content: center;  
     align-items: center;
     height: 100vh;
+    height: 100vh;
     }
 .tech{
     position: relative;
     box-shadow: 0px 0px 90px 0px #569b51;
 }
 .box-input{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    
+    margin:20px;
 }
 #php{
-    top: 530px;
-    left: 627px;
+    top: 80%;
+    left: 70%;
     position: absolute;
 }
 #ncube{
-    top: 170px;
-    left: 745px;
+    top: 35%;
+    left: 90%;
     position: absolute;
 }
 #python{
-    top: 340px;
-    left: 750px;
+    top: 55%;
+    left: 90%;
     position: absolute;
 }
 #ts{
-    top: 510px;
-    left: 300px;
+    top: 80%;
+    left: 40%;
     position: absolute;
 }
 #sass{
-    top: 30px;
-    left: 680px;
+    top: 8%;
+    left: 80%;
     position: absolute;
 }
 #css{
-    top: 163px;
-    left: 164px;
+    top: 33%;
+    left: 24%;
     position: absolute;
 }
 #git{
-    top: 82px;
-    left: 542px;
+    top: 16%;
+    left: 65%;
     position: absolute;
 }
 #vue{
-    top: 113px;
-    left: 323px;
+    top: 20%;
+    left: 45%;
     position: absolute;
 }
 #mysql{
-    top: 508px;
-    left: 91px;
+    top: 80%;
+    left: 8%;
     position: absolute;
 }
 #if{
-    top: 34px;
-    left: 57px;
+    top: 8%;
+    left: 10%;
     position: absolute;
 }
 .modal{
@@ -89,19 +90,19 @@ body{
 }
 h1{
     font-family: Montserrat;
-    font-size: 40px;    
+    font-size: 2rem;    
     letter-spacing: 0.4px;
     line-height: 100%;
     position: absolute;
-    left: 80px;
-    top: 299px;
+    left: 15%;
+    top: 50%;
     color: white;
 }
 
 .box-izq{        
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around;    
 }
 
 .boton{
@@ -110,7 +111,7 @@ h1{
     background-color: #569b51;
     color: white;
     font-family: Montserrat;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0.4px;
@@ -118,7 +119,7 @@ h1{
     padding: 0px;
     margin: 0px;
     border: none;
-    margin-top: 80px;
+    margin-top: 30px;
     cursor: pointer;
     align-self: center;
 }
@@ -128,22 +129,25 @@ h1{
     align-items: center;   
     position: relative;
     width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 90px 0px #569b51;
 }
 .cuenta{
     margin-top: 30px;
 }
 h4{
-    font-size: 34px;
+    font-size: 1.8rem;
     line-height: 36px;
     font-weight: 500;    
     margin: 10px;
 }
 h6{
-    font-size: 14px;
-    margin: 10px;
+    font-size: 0.9rem;
+    margin-top: 10px;
     line-height: 17px;
     font-weight: 500;   
     text-align: justify; 
+    padding: 10px;
 }
 .line{
     border: 2px solid gray;
@@ -161,7 +165,7 @@ hr{
     color: white;
     background-color: #130F26;
     border: 1px solid white;  
-    font-size: 16px;
+    font-size: 0.8rem;
     font-family: Montserrat;
     cursor: pointer;  
 }
@@ -173,33 +177,34 @@ hr{
 }
 h2{
     font-family: IBM+Plex+Sans;
-    font-size: 24px;
+    font-size: 1,3rem;
     line-height: 33px;
     text-align: left;
    
 }
 p{
     font-family: IBM+Plex+Sans;
-    font-size: 17px;
+    font-size: 0.9rem;
     line-height: 24px;
     text-align: left;
     margin-left: 40px;
 }
 .boton-pequeno{
     cursor: pointer;
-    width: 192px;
-    height: 56px;
+    width: 20%;
+    height: 40px;
     background-color: #569b51;
     color: white;
     font-family: IBM+Plex+Sans;
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.4px;
     border-radius: 5px;    
     padding: 0px;    
     border: none;
-    margin-left: 40px;
+    align-self: flex-end;
+   
 }
 
 .boton-login{
@@ -209,7 +214,7 @@ p{
     background-color: #569b51;
     color: white;
     font-family: IBM+Plex+Sans;
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.4px;
@@ -230,9 +235,7 @@ form{
     width: 100%;
 }
 
-.box-form:last-child{
-    margin-top: 40px;
-}
+
 
 input[type="email"],input[type="text"],input[type="password"]{
     border: none;
@@ -240,7 +243,7 @@ input[type="email"],input[type="text"],input[type="password"]{
     border-bottom: 1px solid white;
     color: white;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 0.8rem;
     width: 100%;
 }
 input:-internal-autofill-selected{
@@ -249,7 +252,7 @@ input:-internal-autofill-selected{
     border-bottom: 1px solid white;
     color: white;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: 0.8rem;
     width: 100%;
 }
 
@@ -297,21 +300,35 @@ input:-internal-autofill-selected{
        
     }
 
+    .box-bienvenida{
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: center;
+        align-items: center;
+    }
+
     .box-izq{        
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 100vw;
-        height: 100vh;
+    
+        height: 60vh;
     }
     h1{
         font-family: Montserrat;
-        font-size: 20px;    
+        font-size: 1rem;    
         letter-spacing: 0.4px;
         line-height: 100%;
         position: absolute;       
         color: white;
     }
+    .box-input{    
+        margin:5px;
+    }
+
+
    
 }
 @media (max-width:400px)  {

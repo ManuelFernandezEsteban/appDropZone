@@ -1,6 +1,6 @@
 .custom-dropzone{
     width: 70vw!important;
-    height: 60vh!important;   
+    min-height: 40vh!important;   
     border-radius: 5px!important;
     background-color: #130F26!important;
     border: none!important;
