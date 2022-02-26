@@ -16,11 +16,10 @@ export class RegisterComponent implements OnInit {
   public textoError:string='';
 
   public formularioRegistro=this.fb.group({
-    nombre:['Manuel',[Validators.required,Validators.minLength(3)]],
-    email:['lolo3f@gmail.com',[Validators.required,Validators.email]],
+    nombre:['',[Validators.required,Validators.minLength(3)]],
+    email:['',[Validators.required,Validators.email]],
     password:['',[Validators.required,Validators.minLength(6)]],
-    password2:['',[Validators.required,Validators.minLength(6)]],
-    terminos:[false,Validators.required]
+    password2:['',[Validators.required,Validators.minLength(6)]]
   },{
     validators: this.passwordsValidos('password','password2')
   })

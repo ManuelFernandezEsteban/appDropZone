@@ -22,8 +22,7 @@ body{
     position: relative;
     box-shadow: 0px 0px 90px 0px #569b51;
 }
-.box-input{
-    
+.margin20px{    
     margin:20px;
 }
 #php{
@@ -85,8 +84,9 @@ body{
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50%;
-    left: 10px;
+    top: 40%;
+    left: 0%;
+    border-radius: 5px;
 }
 h1{
     font-family: Montserrat;
@@ -153,7 +153,7 @@ h6{
     border: 2px solid gray;
 }
 hr{
-    width: 100%;
+    width: 99%;
     margin-top: 40px;
     margin-bottom: 40px;
 }
@@ -203,7 +203,7 @@ p{
     border-radius: 5px;    
     padding: 0px;    
     border: none;
-    align-self: flex-end;
+   /* align-self: flex-end;*/
    
 }
 
@@ -268,7 +268,19 @@ input:-internal-autofill-selected{
     color: red;
 }
 
-
+.custom-dropzone{
+    width: 70vw!important;
+    min-height: 60vh!important;   
+    border-radius: 5px!important;
+    background-color: #130F26!important;
+    border: none!important;
+    align-self: center;
+}
+.box-bienvenida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media (max-width:800px)  {
     .main{
@@ -328,7 +340,11 @@ input:-internal-autofill-selected{
         margin:5px;
     }
 
-
+    .custom-dropzone{
+       
+        min-height: 40vh!important;   
+        
+    }
    
 }
 @media (max-width:400px)  {

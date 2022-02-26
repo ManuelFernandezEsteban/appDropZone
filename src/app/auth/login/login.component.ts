@@ -22,8 +22,8 @@ export class LoginComponent implements OnInit {
  
 
   public formularioLogin=this.fb.group({    
-    email:['lolo3f@gmail.com',[Validators.required,Validators.email]],
-    password:['123456',[Validators.required,Validators.minLength(6)]]    
+    email:['',[Validators.required,Validators.email]],
+    password:['',[Validators.required,Validators.minLength(6)]]    
   })
   constructor(private fb:FormBuilder,private usuarioService:UsuarioService,private router:Router,private ngZone:NgZone) { }
 

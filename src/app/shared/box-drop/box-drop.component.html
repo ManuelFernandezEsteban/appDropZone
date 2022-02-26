@@ -2,7 +2,7 @@
    
     <div class="tech ngx-dz-hovered custom-dropzone" ngx-dropzone [expandable]="true" (change)="onSelect($event)">
        <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
-            <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            <ngx-dropzone-label style="overflow:hidden">{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
         </ngx-dropzone-preview>
         <img id="php" src="../../../assets/images/php.png" alt="">
         <img id="ncube" src="../../../assets/images/nCube.png" alt="">
