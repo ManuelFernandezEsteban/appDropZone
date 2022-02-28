@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService } from '../../services/usuario.service';
 import { Router } from '@angular/router';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-register',
@@ -24,11 +25,14 @@ export class RegisterComponent implements OnInit {
     validators: this.passwordsValidos('password','password2')
   })
 
-  constructor(private fb:FormBuilder,private usuarioService:UsuarioService,private router:Router) { }
+  constructor(private fb:FormBuilder,private usuarioService:UsuarioService,private router:Router,private modalss:ModalService) { }
 
   
 
   ngOnInit(): void {
+    this.modalss.modalS.subscribe(resp=>{
+      this.error=resp;
+    })
   }
 
   crearUsurio(){

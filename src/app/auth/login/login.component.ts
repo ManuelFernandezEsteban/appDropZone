@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { environment } from '../../../environments/environment';
+import { ModalService } from '../../services/modal.service';
 
 declare const gapi:any;
 const client_ID = environment.client_ID;
@@ -25,10 +26,13 @@ export class LoginComponent implements OnInit {
     email:['',[Validators.required,Validators.email]],
     password:['',[Validators.required,Validators.minLength(6)]]    
   })
-  constructor(private fb:FormBuilder,private usuarioService:UsuarioService,private router:Router,private ngZone:NgZone) { }
+  constructor(private fb:FormBuilder,private usuarioService:UsuarioService,private router:Router,private ngZone:NgZone,private modalss:ModalService) { }
 
   ngOnInit(): void {
     this.conectarBoton();
+    this.modalss.modalS.subscribe(resp=>{
+      this.error=resp;
+    })
   }
 
   login(){    
@@ -44,12 +48,7 @@ export class LoginComponent implements OnInit {
       
     })  
   
-  } 
-
-  emitirError(){
-
-  }
- 
+  }   
 
   conectarBoton () {
     gapi.load('auth2', ()=>{

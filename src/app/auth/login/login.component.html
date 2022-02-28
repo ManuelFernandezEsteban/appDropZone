@@ -25,7 +25,10 @@
             <div class="img-google"><img src="../../../assets/images/google.png" alt=""><span id="logadoGoogle">Login
                     con Google</span> </div>
         </button>
-        <app-error-card [error]="error"></app-error-card>
+        <div *ngIf="error">
+            <app-error-card></app-error-card>
+        </div>
+
 
     </section>
 </div>

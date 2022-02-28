@@ -14,14 +14,7 @@ export class UploadFileService {
   constructor(private usuarioService:UsuarioService,
               private http:HttpClient) { }
 
-  subirArchivos(formData:FormData):Observable<any>{
-
-    /*console.log(files);
-    let formData = new FormData();
-    formData.append('archivo',files[0],files[0].name);
-    files.forEach(element => {
-      formData.append('files',element,element.name);
-    });*/
+  subirArchivos(formData:FormData):Observable<any>{    
     
     return this.http.post(`${base_url}/upload/${this.usuarioService.user.uid}`,formData,{
       headers:{

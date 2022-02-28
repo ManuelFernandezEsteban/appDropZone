@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-error-card',
@@ -12,13 +13,13 @@ export class ErrorCardComponent implements OnInit {
   
   
 
-  constructor() { }
+  constructor(private modalss:ModalService) { }
 
   ngOnInit(): void { 
 
   }
   cerrarModal(){
-    this.error=false;
+    this.modalss.modalS.emit(false);
     
   }
 }

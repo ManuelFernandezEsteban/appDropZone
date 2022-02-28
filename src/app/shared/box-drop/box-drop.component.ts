@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit,Renderer2, ViewChild } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
 import { UploadFileService } from 'src/app/services/upload-file.service';
 import { UsuarioService } from '../../services/usuario.service';
 
@@ -18,7 +19,8 @@ export class BoxDropComponent implements OnInit {
 
 
   constructor(private uploadService:UploadFileService,
-              private renderer:Renderer2) { }
+              private renderer:Renderer2,
+              private modalss:ModalService) { }
   files: File[] = [];
 
 	onSelect(event:any) {
@@ -36,6 +38,9 @@ export class BoxDropComponent implements OnInit {
     //console.log(this.files)
 	}
   ngOnInit(): void {
+    this.modalss.modalS.subscribe(resp=>{
+      this.error=resp;
+    })
   }
   subirArchivos(){
     if (this.files.length<1){

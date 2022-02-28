@@ -18,7 +18,10 @@
         <div #lista_archivos_subidos>
             
         </div>
-        <app-error-card [error]="error"></app-error-card>
+        <div *ngIf="error">
+            <app-error-card></app-error-card>
+        </div>
+
     </div>
     
     <input class="boton" type="button" value="Subir Archivos" (click)="subirArchivos()">  
